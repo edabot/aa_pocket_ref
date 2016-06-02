@@ -22,3 +22,20 @@ html += "</a>"
 
 html.html_safe
 ```
+
+###layouts
+
+all of the content from the other pages goes in the layout here:
+```
+<%= yield %>
+```
+
+If you want to specify a different part of the layout page, that would look like this in the layout:
+```
+<%= yield :footer %>
+```
+That would be passed to using this in the view:
+```
+<% content_for :footer do %>
+Hi!
+<% end %>
