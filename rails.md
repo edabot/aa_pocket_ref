@@ -51,3 +51,22 @@ That would be passed to using this in the view:
 <% content_for :footer do %>
 Hi!
 <% end %>
+```
+
+###partials
+
+called like this:
+```
+<%= render "shared/errors" %>
+```
+
+this will call the file in "shared/_errors"
+```
+<% if flash[:errors] %>
+  <ul>
+  <% flash[:errors].each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+```
