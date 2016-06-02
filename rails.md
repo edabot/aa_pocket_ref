@@ -89,3 +89,19 @@ shorthand method
 <%= render @cats %>
 ```
 this one works if you're rendering Cat model objects. Names need to match (I think)
+
+###working with form partials for users logged in vs. out
+
+the call on the edit and new pages
+```
+<%= render "form", cat: @cat %>
+```
+the partial
+
+```
+<% action = (cat.persisted? ? cat_url(cat) : cats_url) %>
+<% method = (cat.persisted? ? :patch : :post) %>
+
+<form action="<%= action %>" method="post">
+  <input type="hidden" name="_method" value="<%= method %>">
+  ```
