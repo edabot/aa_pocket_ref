@@ -111,10 +111,12 @@ making one
 ```
 SecureRandom.urlsafe_base64(16)
 ```
-assigned like this:
+assigned to cookie like this:
 ```
 session[:session_token] = user.reset_session_token!
 ```
+session is the cookie on your computer. This exact name needs to be used.
+
 from
 ```  
 def reset_session_token!
