@@ -2,12 +2,12 @@
 
 ```
 '.source.ruby':
-  'require byebug':
-    prefix: 'rbb'
-    body: "require 'byebug'"
+  'name here':
+    prefix: 'shortcut'
+    body: "ruby stuff I don't want to repeat'"
 
 '.text.html':
   'name here':
-    prefix: 'auth'
-    body: '<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">'
+    prefix: 'shortcut'
+    body: "html stuff I don't want to write over and over"
 ```
