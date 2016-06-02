@@ -92,7 +92,7 @@ this one works if you're rendering Cat model objects. Names need to match (I thi
 
 ###working with form partials for users logged in vs. out
 
-the call on the edit and new pages
+the call on the edit and new pages. Note that the form itself is now *not* working with an instance variable
 ```
 <%= render "form", cat: @cat %>
 ```
