@@ -105,3 +105,21 @@ the partial
 <form action="<%= action %>" method="post">
   <input type="hidden" name="_method" value="<%= method %>">
   ```
+###session token
+
+making one
+```
+SecureRandom.urlsafe_base64(16)
+```
+assigned like this:
+```
+session[:session_token] = user.reset_session_token!
+```
+from
+```  
+def reset_session_token!
+    self.session_token = SecureRandom.urlsafe_base64(16)
+    self.save!
+    self.session_token
+  end
+```
