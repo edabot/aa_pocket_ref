@@ -5,6 +5,8 @@ Flash is used for the *next* request
 
 Flash.now is used for *this* request
 
+See Partials for rendering Flash errors
+
 ###BCrypt
 ```
 pasword_digest = BCrypt::Password.create(password)
