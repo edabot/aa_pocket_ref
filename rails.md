@@ -72,3 +72,20 @@ this will call the file in "shared/_errors"
   </ul>
 <% end %>
 ```
+
+###partials rendering collections
+
+partial filename = _cat.html.erb
+
+longhand method
+
+```
+<% @cats.each do |cat| %>
+  <%= render "cat", cat: cat %>
+<% end %>
+```
+shorthand method
+```
+<%= render @cats %>
+```
+this one works if you're rendering Cat model objects. Names need to match (I think)
