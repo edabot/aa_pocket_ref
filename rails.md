@@ -1,5 +1,10 @@
 
 
+###Flash and Flash.now
+Flash is used for the *next* request
+
+Flash.now is used for *this* request
+
 ###BCrypt
 ```
 pasword_digest = BCrypt::Password.create(password)
