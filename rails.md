@@ -1,5 +1,12 @@
 
-###autehticity token
+
+###BCrypt
+```
+pasword_digest = BCrypt::Password.create(password)
+bcrypt_object = BCrypt::Password.new(password_digest)
+bcrypt_object.password_is?(password) --> true
+```
+###authenticity token
 
 What you need to include inside a form to be CSRF safe
 
