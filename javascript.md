@@ -26,14 +26,8 @@ function Dog (name, coatColor) {
   this.coatColor = coatColor;
 }
 
-// The surrogate will be used to construct `Dog.prototype`.
 function Surrogate () {};
-// A `Surrogate` instance should delegate to `Animal.prototype`.
 Surrogate.prototype = Animal.prototype;
-
-// Set `Dog.prototype` to a `Surrogate` instance.
-// `Surrogate.__proto__` is `Animal.prototype`, but `new
-// Surrogate` does not invoke the `Animal` constructor function.
 Dog.prototype = new Surrogate();
 
 Dog.prototype.bark = function () {
