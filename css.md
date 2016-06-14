@@ -15,3 +15,13 @@ html, body, section, arcticle, h1, h2, p {
   backround: transparent;
 }
 ```
+
+###Clear the float
+
+```
+.group:after{
+  content: "";
+  display:block;
+  clear: both;
+}
+```
