@@ -15,3 +15,11 @@ jQuery#parent, jQuery#children, and jQuery#siblings methods.
   $ul.siblings().attr("style", "color: blue");
 </script>
 ```
+###Building DOM elements
+```
+    const $li = $("<li></li>");
+    // sets the textContent property
+    $li.text(coolThings[i]);
+    $li.attr("style", "background-color: green");
+    $ul.append($li)
+```
