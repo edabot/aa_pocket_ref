@@ -23,3 +23,13 @@ jQuery#parent, jQuery#children, and jQuery#siblings methods.
     $li.attr("style", "background-color: green");
     $ul.append($li)
 ```
+
+###Event delegation
+
+```
+function HandleLiClick (event) {
+  var text = $(event.curentTarget).text();
+}
+
+$("ul.tasks).on("click", "li.task", handleLiClick);
+```
